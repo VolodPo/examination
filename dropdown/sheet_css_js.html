@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">	
+
+
+
+	<title>Dropdowns</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+	
+		body {
+			font: 300 15px/1.5 "Poppins", arial, sans-serif;
+			background: #333;
+			margin: 15px;
+		}
+	
+		article {
+			width: 1300px;
+			margin: 0 auto;
+			background: #000;
+			color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 15px 2px #666;
+		}
+	
+		section {
+			clear: left;
+		}
+	
+		h1 {
+			font-size: 45px;
+			font-weight: 600;
+			letter-spacing: 15px;
+			text-align: center;
+		}
+
+		h1, #main_content{
+			padding: 15px;
+		}
+
+		p {
+			margin: 15px 0;
+		}
+	
+		a {
+			color: #06c;
+			font-weight: 600;
+		}
+	
+		.ul_general {
+			background: white;
+			width: 600px;
+			margin: auto;
+			display: flex;			
+			-webkit-transition: .5s;
+			transition: .5s;
+			box-shadow: 1px 1px 5px 5px white;
+			border-radius: 5px;
+			
+		}
+	
+		#main_nav li {
+			float: left;
+			position: relative;
+			width: 150px;
+			list-style: none;
+			-webkit-transition: .5s;
+			transition: .5s;
+		}
+	
+		#main_nav > ul > li > a, h1 {
+			text-transform: uppercase;
+		}
+	
+		#main_nav a {
+			display: block;
+			text-decoration: none;
+			padding: 5px 15px;
+			color: #000;
+		}
+
+		#main_nav ul ul {
+			position: absolute;
+			left: 0;
+			top: 100%;
+			visibility: hidden;
+			opacity: 0;
+		}
+	
+		#main_nav ul ul ul {
+			left: 100%;
+			top: 0;
+		}
+	
+		#main_nav li:hover, #main_nav li:hover li {
+			background: #ddd;
+		}
+	
+		#main_nav li li:hover, #main_nav li li:hover li {
+			background: #bbb;
+		}
+	
+		#main_nav li li li:hover {
+			background: #999;
+		}
+	
+		#main_nav li:hover > ul {
+			visibility: visible;
+			opacity: 1;
+		}
+	</style>
+	
+</head>
+<body>
+	<article>
+		<h1>Сонячна система</h1>
+
+		<nav id="main_nav">
+			<ul class="ul_general">
+				<li>
+					<a href="">Зірка</a>
+					<ul>
+						<li><a href="">Ім'я</a></li>
+						<li><a href="">Вага</a></li>
+						<li><a href="">Діяметр</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="">Планети</a>
+					<ul>
+						<li>
+							<a href="">Юпітер</a>
+							<ul>
+								<li><a href="">Вага</a></li>
+								<li><a href="">Діяметр</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">Венера</a>
+							<ul>
+								<li><a href="">Вага</a></li>
+								<li><a href="">Діяметр</a></li>
+								<li><a href="">Супутники</a></li>
+								<li><a href="">Материки</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">Земля</a>
+							<ul>
+								<li><a href="">Українці</a></li>
+								<li><a href="">Американці</a></li>
+								<li><a href="">Хомо Вульгарис</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">Астероїди</a>
+					<ul>
+						<li><a href="">Веста</a></li>
+						<li><a href="">Гея</a></li>
+						<li><a href="">Церера</a></li>
+						<li><a href="">Троянські астероїди</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="">Комети</a>
+					<ul>
+						<li><a href="">Галея</a></li>
+						<li><a href="">Темпеля</a></li>
+						<li><a href="">Арслана</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	
+		<section id="main_content">
+			<p>Со́нячна систе́ма — планетна система, що включає в себе центральну зорю — Сонце, і всі природні космічні об'єкти (планети, астероїди, комети, потоки сонячного вітру тощо), які об'єднуються гравітаційною взаємодією[6]. Сонячна система є частиною значно більшого комплексу, який складається із зір і міжзоряної речовини — галактики Чумацький Шлях.</p>
+
+			<p>Сонце містить ≈99,85% маси Сонячної системи; газові планети-гіганти (Юпітер, Сатурн, Уран і Нептун) складають 99% залишкової маси[8]. Як і в інших зір, у надрах Сонця ефективно відбуваються термоядерні реакції з виділенням енергії[9]. Планети за фізичними характеристиками поділяють на дві групи. Ближче до Сонця розташовані планети земної групи: Меркурій, Венера, Земля, Марс; далі від Сонця розташувались планети-гіганти: Юпітер, Сатурн, Уран, Нептун[10]. Планети земної групи порівняно невеликі, їхня густина ≈5 г/см³; вони складаються переважно з важких хімічних елементів; мають гаряче металеве ядро, оточене мантією із силікатних порід, і верхній шар — кору[11]. Планети-гіганти не мають твердої поверхні, бо за хімічним складом (99 % гідрогену і гелію) і густиною (≈1 г/см³) вони нагадують зорі, а їхня велика маса спричиняє нагрівання ядер до температури понад +10 000 °С.</p>
+
+			<p>Окрім Сонця й планет до складу Сонячної системи входять також карликові планети, супутники планет, астероїди, комети, метеорна речовина.</p>
+
+		</section>		
+	</article>
+</body>
+</html>

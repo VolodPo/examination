@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table{
+			border: 1px solid silver;
+			border-radius: 3px;
+			margin: 0 0 30px 0;
+			width: 900px;						
+			}
+
+				tr{
+					background: silver;
+					border:1px solid silver;
+					border-radius: 2px;
+				}
+
+					td {border:1px solid silver;
+					 border-radius:2px;
+					 text-align: center;
+					}
+					th {border:1px solid silver;
+					 border-radius:2px;
+					 text-align: center;
+					}			
+		</style>
+</head>
+
+<body>
+	<script type="text/javascript">
+		
+	var xxx=[];
+	var ddd=[];
+	var promise=fetch('https://back.cruiseraddiction.com/api/parts')
+	  .then(response => response.json())
+	  .then(json => {arr=json.data;  
+  	  		 
+
+	  	class DataTable{
+
+	  		array = [];
+	  		object={};
+	  		header=Object.keys(arr[0]);
+
+	  		constructor(array, rowClick, selected, displayName,displayValue){
+		  		this.array=array;
+		  		this.rowClick=rowClick
+		  		this.selected=selected;
+		  		this.displayName=displayName;
+		  		this.displayValue=displayValue;
+		  		this.createTable();
+		  		this.rowClick();
+		  		this.selected();
+		  		this.displayName();
+		  		this.displayValue();
+	  		}
+	  	
+
+	  		
+			createTable(){
+
+		  		var table=document.createElement("table");
+				var header=Object.keys(this.array[0])
+				var tr=document.createElement("tr");				
+				header.forEach(function(item,index){	
+					var th=document.createElement("th");
+					th.innerText=item;
+					tr.append(th);								
+				});
+				table.append(tr);
+
+
+				arr.forEach(function(item,index){
+					var tr=document.createElement("tr");
+					var j=0;					
+					for(var dat in item){
+						var td=document.createElement("td");
+						td.innerText=item[dat];
+						td.line=index;
+						td.column=j++;
+						tr.append(td);
+					}
+					table.append(tr);
+				});		
+
+				document.body.append(table);
+			}		
+		}
+
+
+
+		var specTable= new DataTable(
+			arr,
+			function(){document.addEventListener("click",( e )=>{
+				var indexLine=e.target.line;
+				var objLine=arr[indexLine];	
+
+				console.log("We click to: ",objLine);
+			})},
+
+			function(){document.addEventListener("click",( e )=>{
+				var indexLine=e.target.line;
+				var indexColumn=e.target.column;
+				var objectOrder=this.object			
+				 var stringKey=String(arr[indexLine]["id"]);
+				 if(!this.object[stringKey]) {this.object[stringKey]=1;
+				 } else this.object[stringKey] ++;
+
+				 console.log("ordered product ", objectOrder);				
+			})},
+
+			function(){document.addEventListener("click",( e )=>{
+				var indexColumn=e.target.column;
+				var keyName=this.header[indexColumn];
+
+				console.log("We click to keyName: ", keyName);
+			})},
+
+			function(){document.addEventListener("click",( e )=>{
+				var indexLine=e.target.line;
+				var indexColumn=e.target.column;
+				var keyName=this.header[indexColumn];
+				var keyData=arr[indexLine][keyName];
+
+				console.log("We click to keyData: ", keyData);
+			})}
+		) 
+	})
+
+	</script>
+
+</body>
+</html>
+

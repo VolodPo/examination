@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tasc</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="general">
+		<div class="main">
+			<form class="form">
+				<div style="text-align: center; font-weight: 600;">
+					<span>РЕЄСТРАЦІЯ</span><br>
+					<span>Будь-ласка заповніть дані для реєстрації</span>
+				</div>
+
+				<fieldset class="login">
+					<legend>Логін і пароль</legend>
+
+					<label>Придумайте логін:</label>
+					<input type="text" class="style" name="" placeholder="не менше 6 символів" required><br>
+
+					<label>Придумайте пароль:</label>
+					<input type="password" class="style" name="" placeholder="не менше 6 символів" required><br>
+
+					<label>Введіть пароль ще раз:</label>
+					<input type="password" name="" class="style" placeholder="не менше 6 символів" required><br>
+
+					<input class="save" type="submit" name="" value="ЗРОБЛЕНО">
+				</fieldset>				
+
+				<fieldset class="anckette">
+					<legend>Анкетні дані</legend>
+
+					<label>Прізвище:</label>
+					<input type="text" class="style" name="" autofocus required><br>
+
+					<label>Ім'я:</label>
+					<input type="text" class="style" name="" required><br>
+
+					<label>По-батькові:</label>
+					<input type="text" class="style" name=""><br>
+
+					<label>Дата народження:</label>
+					<input type="date" name=""><br>
+
+					<label class="age">Вкажіть стать:</label>
+
+					<label class="radio">
+						<input id="radio1" type="radio" name="vova" required>
+						<div class="div_radio">Ч</div>
+					</label>
+
+					<label class="radio">
+						<input id="radio2" type="radio" name="vova" required>
+						<div class="div_radio">Ж</div>
+					</label>
+
+					<label class="radio">
+						<input id="radio3" type="radio" name="vova" required>
+						<div class="div_radio">Оно</div>
+					</label>
+				</fieldset>
+
+				<fieldset class="contacts">
+					<legend>Котнактні дані</legend>
+
+					<label>Номер телефону:</label>
+					<input type="text" name="" class="style" placeholder="+(38)"  required><br>
+
+					<label>Ваш e-mail:</label>
+					<input type="e-mail" name="" class="style" required="">
+				</fieldset>
+
+
+
+				<fieldset class="zgoda">
+					<legend>Згода на обробку персональних даних</legend>
+
+					<input id="check" type="checkbox" name="">
+					<label class="selected" for="check"></label>
+						<span>
+							Я надаю згоду на обробку своїх персональних даних відповідно до Угоди про конфеденційність і приймаю її умови
+						</span>
+				</fieldset>
+
+				<button type="submit">
+					<b>РЕЄСТРАЦІЯ</b>
+				</button>		
+			</form>	
+		</div>
+	</div>
+
+<script src="jscript.js" type="text/javascript"></script>
+</body>
+</html>

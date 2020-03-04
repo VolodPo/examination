@@ -1,0 +1,291 @@
+body{
+	background:#FFF8DC
+}
+
+.general{
+	width: 100%;
+}
+
+.main{
+	width: 1300px;
+	height: 95vh;
+	margin: auto;
+	background-image: url(fon.jpg);
+}
+
+
+
+.form{
+	width: 30%;
+	position: relative;
+	top: 35px;	
+	left: 100px;
+	font-family: 'Lobster';
+	color: #312203; 	
+}
+
+fieldset{
+	border-radius: 10px 10px 0;
+}
+
+
+.style{
+	width: 180px;
+	height: 17px;		
+	padding: 10px;
+	font-family: 'Lobster';
+	box-sizing: border-box;	
+	background: #F3EFE3;
+	border: 0;	
+	border-radius: 0px 4px;
+	box-shadow: 1px 1px 3px 2px #E6D6BC;
+}
+
+.style:focus {
+    outline: none;
+    outline-offset: 0;    
+    box-shadow: 1px 1px 3px 4px #D6C7AA;
+}
+
+[type="date"]{
+	width: 141px;
+	height: 22px;
+	box-sizing: border-box;	
+	padding: 0 0 0 19px;
+	margin: 0 0 0 40px;
+	font-family: 'Lobster';
+	color: #312203;
+	background: #F3EFE3;
+	border: 0;
+	border-radius: 0px 4px;
+	box-shadow: 1px 1px 3px 2px #E6D6BC;		
+	
+}
+
+.login{
+	text-align:end;
+	margin: 10px 0;
+}
+
+.save{
+	width: 50;
+	height: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Lobster';
+	font-size:12px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #6B4924;
+	background: #D5C6A9;
+	border: 0;
+	border-radius: 4px 0px;
+	box-shadow: 1px 1px 4px 3px #B6A077;
+}
+
+.save:focus {
+    outline: none;            
+}
+
+
+.save:active{
+	color: #312203;	
+	outline-offset: 0;
+	outline: none;
+}
+
+
+.anckette{	 
+	text-align:end;
+	margin: 10px 0;
+}
+.contacts{
+	text-align:end;
+	margin: 10px 0;
+}
+.zgoda{
+	text-align:end;
+	margin: 10px 0;
+}
+button{		
+	width: 50;
+	height: 25px;
+	margin: 5px 0 0 300px;
+	font-family: 'Lobster';
+	font-size:14px;
+	font-weight: 900;
+	color: #312203;	
+	background: #D5C6A9;
+	border: 0;
+	border-radius: 4px 0px;
+	box-shadow: 1px 1px 4px 3px #766037;
+}
+
+button:focus {
+    color:#FFFFFF;
+    text-shadow: 1px 5px 3px #312203,-1px -1px 1px #312203;    
+    outline: none;
+    box-shadow: 1px 1px 4px 3px #312203 ;
+               
+}
+
+
+.selected {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+input {
+	margin: 0 0 5px 0;
+}
+
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+
+.selected:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 1px;
+    border-radius: 3px;    
+    box-shadow: inset 0px 2px 3px 0px #766037,
+    0px 1px 0px 0px #766037;    
+}
+
+.age{
+	top:-14px;
+	left:-11px;
+}
+
+
+
+.radio{
+	margin: 30px 0 0 0;
+	padding-left: 17px;	
+}
+
+
+[type="radio"] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 7px;
+}
+.div_radio {
+	position: relative;
+	top:-13px;
+	padding: 0 0 0 23px;
+	cursor: pointer;
+	
+}
+.div_radio:before {
+	content: '';
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	background: 2px solid #D5C6A9;
+	box-shadow: 1px 1px 3px 2px #E6D6BC;
+	border-radius: 50%;
+	background: #F3EFE3;
+}
+	
+
+.div_radio:after {
+	content: "";
+	position: absolute;
+	top: 1px;
+	left: 4px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #907A51;	
+	opacity: 0;
+	transition: .2s;
+}
+
+.radio input:checked + .div_radio:after {
+	opacity: 1;
+}
+
+.radio input:focus + .div_radio:before {
+	top: -4px;
+	left: -1px;
+
+	border: 1px solid #907A51;
+}
+
+input[type=checkbox]:checked + .selected:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px #F00000;
+    font-size: 15px;
+    color: #D2443A;
+    text-align: center;
+    font-weight: 900;
+    line-height: 15px;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+
+
+
+/*<select class="yazyk">
+					<option label="ENG">English</option>
+					<option label="FRN">France</option>
+					<option label="DTH">Deutsch</option>
+					<option label="UKR">Ukrainian</option>
+				</select>
+				<select class="valuta">
+					<option label="USD">US Dollar</option>
+					<option label="CAD">CAN Dollar</option>
+					<option label="EUR">Euro</option>
+					<option label="UAH">Hrivna</option>
+				</select>			
+
+
+
+.yazyk_valuta{
+	width: 9%;
+	height: 27%;
+	margin-left: 3.2%;
+	background: white;
+	display: flex;
+}
+
+.yazyk{
+	width: 50%;
+	height: 100%;
+	font-family: "Arial black";
+	font-size: 12px;
+	padding-left: 10px;
+	color: #32405b;
+	outline: none;	
+	border: 0;		
+	outline-offset: 0;
+	appearance: none;
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	border-right: 1px solid #D2443A;
+  	background: #ECF0F3;
+}*/
